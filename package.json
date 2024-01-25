@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Basic website",
   "main": "index.js",
-  "author": "andrea <ngocanhhsgs@gmail.com>",
+  "author": "Danilo <danilo.cangucu@integrify.io>",
   "license": "MIT",
   "scripts": {
     "compile": "sass src/styles/style.scss:src/style.css",
     "compile:watch": "sass --watch src/styles/style.scss:src/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0"
   }
 }

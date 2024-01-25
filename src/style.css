@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  color: black;
+  font-size: 16px;
+}
+
+/* HEADER */
+.header {
+  padding: 15px;
+  background-color: #c1666b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav {
+  font-family: "Playfair Display", serif;
+  width: 85%;
+}
+
+.header .header__logo {
+  height: 150px;
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.header .navbar__row1 .navbar__list {
+  font-size: 2.5rem;
+  gap: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header .navbar__row2 {
+  gap: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header .navbar__row2 .navbar__cart {
+  height: 20px;
+}
+
+.header .navbar__row1 .navbar__list a {
+  color: #e4dfda;
+}
+
+ul li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+}
+
+.navbar__item a {
+  position: relative;
+  text-decoration: none;
+}
+.navbar__item a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar__item a:hover::after {
+  width: 100%;
+}
+
+.navbar__search-input {
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #e4dfda;
+  padding: 0;
+  outline: none;
+  caret-color: white;
+}
+.navbar__search-input::-webkit-input-placeholder {
+  color: white;
+}
+
+/* ALL SECTIONS AND FOOTER*/
+section,
+footer {
+  padding: 15px;
+  font-size: 2rem;
+}
+
+/* ALL SECTIONS */
+section h1 {
+  font-family: "Playfair Display", serif;
+  margin: 0px;
+  color: #c1666b;
+}
+
+section h2 {
+  margin: 0px;
+}
+
+/* SECTION MOST SOLD */
+.most-sold .most-sold__books {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.most-sold__book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.most-sold__book img {
+  height: 200px;
+}
+
+.most-sold__book h2 {
+  font-size: 1.3rem;
+}
+
+.most-sold__book p {
+  font-size: 1.2rem;
+  color: #5E747F;
+}
+
+.most-sold__book img {
+  transition: 0.3s ease-in-out;
+}
+
+.most-sold__book img:hover {
+  transform: scale(1.1);
+}
+
+/* SECTION RECOMMENDATIONS */
+.recommendations {
+  background-color: #e4dfda;
+}
+
+.recommendations .recommendations__book {
+  margin: 20px 40px 20px 0;
+  gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.recommendations__book img {
+  height: 250px;
+  border: 1px solid #c1666b;
+}
+
+.recommendations__book-title {
+  font-size: 2rem;
+}
+
+.recommendations__book-subtitle {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.recommendations__book-description {
+  font-size: 1.2rem;
+}
+
+.recommendations__book-link {
+  font-size: 1rem;
+  text-align: right;
+  text-decoration: none;
+}
+
+.recommendations__book-link a {
+  color: #5E747F;
+}
+
+/* FOOTER */
+footer {
+  border-top: 2px solid #4281a4;
+  font-family: "Source Sans 3", sans-serif;
+  margin: 0px;
+  background-color: #011627;
+  color: white;
+}
+
+footer h1 {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+}
+
+.about figure {
+  margin: 0;
+}
+
+.about__store {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.about__store-figure {
+  display: flex;
+  gap: 40px;
+}
+
+.about__store figure img {
+  height: 120px;
+  border: 1px solid #c1666b;
+}
+
+.about__store .about__store-details .about__store-address p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.about__social-media {
+  text-align: right;
+  align-self: flex-end;
+}
+
+.about__social-media a {
+  text-decoration: none;
+}
+
+.about__social-media-icon {
+  height: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
