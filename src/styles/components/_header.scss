@@ -1,0 +1,106 @@
+@use '../variables';
+@use '../mixins';
+
+.header {
+    padding: variables.$base-padding-size;
+    background-color: variables.$navbar-color;
+    @include mixins.flex-center;
+    @include mixins.respond-to('mobile') {
+            flex-direction: column;
+    
+            ul {
+                padding-inline-start: 0;
+            }
+        }
+}
+
+.header nav {
+    font-family: variables.$title-font;
+    width: 85%;
+}
+
+.header .header__logo {
+    height: variables.$logo-desktop-height;
+    animation: spin 20s linear infinite;
+    @include mixins.respond-to('mobile') {
+        height: variables.$logo-mobile-height;
+    }
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.header .navbar__row1 .navbar__list {
+    font-size: 2.5rem;
+    gap: variables.$base-gap-size;
+    @include mixins.flex-center(flex-end);
+    @include mixins.respond-to('mobile') {
+            flex-direction: column;
+        }
+}
+
+.header .navbar__row2 {
+    gap: variables.$base-gap-size;
+    @include mixins.flex-center(flex-end);
+    @include mixins.respond-to('mobile') {
+            justify-content: center;
+        }
+}
+
+.header .navbar__row2 .navbar__cart {
+    height: variables.$icon-height;
+}
+
+.header .navbar__row1 .navbar__list a {
+    color: variables.$text-light-color;
+}
+
+ul li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.navbar__item a {
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: currentColor;
+        transition: variables.$fast-transition-effect;
+    }
+}
+
+.navbar__item a:hover::after {
+    width: 100%;
+}
+
+.navbar__search-input {
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    border-bottom: variables.$navbar-search-border;
+    padding: 0;
+    outline: none;
+    caret-color: white;
+
+    &::-webkit-input-placeholder {
+        color: white;
+    }
+}

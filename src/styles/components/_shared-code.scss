@@ -1,0 +1,25 @@
+@use '../variables';
+@use '../mixins';
+
+body {
+    margin: 0;
+    font-family: variables.$text-font;
+    color: black;
+    font-size: variables.$base-font-size;
+}
+
+section,
+footer {
+    padding: 15px;
+    font-size: 2rem;
+}
+
+section h1 {
+    font-family: variables.$title-font;
+    margin: 0px;
+    color: variables.$title-color;
+}
+
+section h2 {
+    margin: 0px;
+}

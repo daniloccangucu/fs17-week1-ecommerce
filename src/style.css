@@ -1,11 +1,4 @@
-body {
-  margin: 0;
-  font-family: "Source Sans 3", sans-serif;
-  color: black;
-  font-size: 16px;
-}
-
-/* HEADER */
+/* Header */
 .header {
   padding: 15px;
   background-color: #c1666b;
@@ -118,25 +111,7 @@ li a {
   color: white;
 }
 
-/* ALL SECTIONS AND FOOTER*/
-section,
-footer {
-  padding: 15px;
-  font-size: 2rem;
-}
-
-/* ALL SECTIONS */
-section h1 {
-  font-family: "Playfair Display", serif;
-  margin: 0px;
-  color: #c1666b;
-}
-
-section h2 {
-  margin: 0px;
-}
-
-/* SECTION MOST SOLD */
+/* Sections */
 .most-sold .most-sold__books {
   justify-content: center;
   display: grid;
@@ -176,7 +151,6 @@ section h2 {
   transform: scale(1.1);
 }
 
-/* SECTION RECOMMENDATIONS */
 .recommendations {
   background-color: #e4dfda;
 }
@@ -229,7 +203,7 @@ section h2 {
   color: #5E747F;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
   border-top: 2px solid #4281a4;
   font-family: "Source Sans 3", sans-serif;
@@ -286,6 +260,30 @@ footer h1 {
 
 .about__social-media-icon {
   height: 30px;
+}
+
+/* Shared code */
+body {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  color: black;
+  font-size: 16px;
+}
+
+section,
+footer {
+  padding: 15px;
+  font-size: 2rem;
+}
+
+section h1 {
+  font-family: "Playfair Display", serif;
+  margin: 0px;
+  color: #c1666b;
+}
+
+section h2 {
+  margin: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

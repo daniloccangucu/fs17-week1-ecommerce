@@ -1,0 +1,61 @@
+@use '../variables';
+@use '../mixins';
+
+.recommendations {
+    background-color: variables.$bg-light-color;
+}
+
+.recommendations .recommendations__book {
+    margin: 20px 40px 20px 0;
+    gap: variables.$base-gap-size;
+    @include mixins.grid-layout(1fr 3fr);
+    @include mixins.respond-to('mobile') {
+        @include mixins.grid-layout(
+            repeat(
+                auto-fit,
+                minmax(
+                    variables.$min-recommendation-book,
+                    variables.$max-recommendation-book
+                )
+            )
+        );
+        margin-inline-end: 0;
+    }
+}
+
+.recommendations__book {
+    @include mixins.respond-to('mobile') {
+        &-image {
+            display: block;
+            margin: auto;
+        }
+    }
+
+    & img {
+        height: variables.$base-book-height + 50;
+        border: variables.$image-border;
+    }
+}
+
+.recommendations__book-title {
+    font-size: 2rem;
+}
+
+.recommendations__book-subtitle {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.recommendations__book-description {
+    font-size: 1.2rem;
+}
+
+.recommendations__book-link {
+    font-size: 1rem;
+    text-align: right;
+    text-decoration: none;
+}
+
+.recommendations__book-link a {
+    color: variables.$default-ln-color;
+}

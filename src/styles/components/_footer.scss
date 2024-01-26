@@ -1,0 +1,64 @@
+@use '../variables';
+@use '../mixins';
+
+footer {
+    border-top: 2px solid #4281a4ff;
+    font-family: variables.$text-font;
+    margin: 0px;
+    background-color: variables.$footer-bg-color;
+    color: white
+}
+
+footer h1 {
+    font-family: variables.$title-font;
+    margin: 0;
+}
+
+.about figure {
+    margin: 0;
+}
+
+.about__store {
+    margin-top: 40px;
+    @include mixins.grid-layout(1fr);
+}
+
+.about__store-figure {
+    display: flex;
+    gap: variables.$base-gap-size;
+    @include mixins.respond-to('mobile') {
+        @include mixins.grid-layout(
+            repeat(
+                auto-fit,
+                minmax(
+                    variables.$min-store,
+                    variables.$max-store
+                )
+            )
+        );
+    }
+}
+
+.about__store figure img {
+    height: 120px;
+    border: variables.$image-border;
+}
+
+.about__store .about__store-details .about__store-address p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.about__social-media {
+    text-align: right;
+    align-self: flex-end;
+}
+
+.about__social-media a {
+    text-decoration: none;
+}
+
+.about__social-media-icon {
+    height: variables.$social-icon-height;
+}

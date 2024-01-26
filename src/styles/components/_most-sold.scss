@@ -1,0 +1,45 @@
+@use '../variables';
+@use '../mixins';
+
+.most-sold .most-sold__books {
+    justify-content: center;
+    @include mixins.grid-layout(repeat(4, 1fr));
+    @include mixins.respond-to('mobile') {
+        @include mixins.grid-layout(
+            repeat(
+                auto-fit,
+                minmax(
+                    variables.$min-most-sold-book,
+                    variables.$max-most-sold-book
+                )
+            )
+        );
+    }
+}
+
+.most-sold__book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.most-sold__book img {
+    height: variables.$base-book-height;
+}
+
+.most-sold__book h2 {
+    font-size: 1.3rem;
+}
+
+.most-sold__book p {
+    font-size: 1.2rem;
+    color: variables.$book-price-color;
+}
+
+.most-sold__book img {
+    transition: variables.$fast-transition-effect;
+}
+
+.most-sold__book img:hover {
+    transform: scale(1.1);
+}
