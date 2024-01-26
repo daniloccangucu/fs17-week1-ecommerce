@@ -21,3 +21,21 @@ Currently, wrapping up my studies in Information and Communication Technology at
 - I live by the belief that a well-curated playlist or a captivating movie can transform any moment. 🎬🎶
 
 Thanks for stopping by! 🚀✨
+
+# Project Details
+
+## E-commerce Website
+
+This project is an e-commerce website designed for selling books using HTML and Sass. The website features the sections "most sold", "recommendations", and "about us". 
+
+## Features
+
+- **Responsive Design**: The website is designed to be responsive, ensuring optimal viewing experience across different devices.
+- **Animations**: Basic animations such as hover effects and active link styles are implemented.
+- **Grid Layout**: Flexbox and Grid layout techniques are used throughout the website for efficient layout management.
+- **Accessibility**: Semantic HTML tags are used to ensure accessibility and improve SEO.
+- **Styling**: SCSS is used for styling, with variables and mixins for maintainability and reusability.
+
+## Deployment
+
+The project is deployed on Netlify.
