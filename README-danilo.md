@@ -22,7 +22,7 @@ Currently, wrapping up my studies in Information and Communication Technology at
 
 Thanks for stopping by! 🚀✨
 
-# Project Details
+# Week 1 Project Details
 
 ## E-commerce Website
 
@@ -38,4 +38,4 @@ This project is an e-commerce website designed for selling books using HTML and 
 
 ## Deployment
 
-The project is deployed on Netlify.
+The project is deployed on Netlify and can be accessed [here](https://fabulous-sawine-7ca71c.netlify.app/)
