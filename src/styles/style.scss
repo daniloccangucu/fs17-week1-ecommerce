@@ -29,8 +29,12 @@ body {
 }
 
 .header .header__logo {
-    height: variables.$logo-height;
+    height: variables.$logo-desktop-height;
     animation: spin 20s linear infinite;
+    @include mixins.respond-to('mobile') {
+        height: variables.$logo-mobile-height;
+    }
+
 }
 
 @keyframes spin {
@@ -133,7 +137,15 @@ section h2 {
     justify-content: center;
     @include mixins.grid-layout(repeat(4, 1fr));
     @include mixins.respond-to('mobile') {
-            @include mixins.grid-layout(repeat(auto-fit, minmax(300px, 1fr)));
+            @include mixins.grid-layout(
+                repeat(
+                    auto-fit,
+                    minmax(
+                        variables.$min-most-sold-book,
+                        variables.$max-most-sold-book
+                    )
+                )
+            );
         }
 }
 
@@ -175,7 +187,15 @@ section h2 {
     gap: variables.$base-gap-size;
     @include mixins.grid-layout(1fr 3fr);
     @include mixins.respond-to('mobile') {
-            @include mixins.grid-layout(repeat(auto-fit, minmax(380px, 1fr)));
+            @include mixins.grid-layout(
+                repeat(
+                    auto-fit,
+                    minmax(
+                        variables.$min-recommendation-book,
+                        variables.$max-recommendation-book
+                    )
+                )
+            );
             margin-inline-end: 0;
         }
 }
@@ -238,17 +258,21 @@ footer h1 {
 .about__store {
     margin-top: 40px;
     @include mixins.grid-layout(1fr);
-    
-        @include mixins.respond-to('mobile') {
-            @include mixins.grid-layout(1fr);
-        }
 }
 
 .about__store-figure {
     display: flex;
     gap: variables.$base-gap-size;
     @include mixins.respond-to('mobile') {
-            @include mixins.grid-layout(repeat(auto-fit, minmax(220px, 1fr)));
+            @include mixins.grid-layout(
+                repeat(
+                    auto-fit,
+                    minmax(
+                        variables.$min-store,
+                        variables.$max-store
+                    )
+                )
+            );
         }
 }
 

@@ -8,7 +8,8 @@ $base-padding-size: 15px;
 $base-gap-size: 40px;
 
 // HEIGHTS
-$logo-height: 150px;
+$logo-desktop-height: 150px;
+$logo-mobile-height: 200px;
 $icon-height: 20px;
 $social-icon-height: 30px;
 $base-book-height: 200px;
@@ -28,3 +29,11 @@ $image-border: 1px solid #c1666bff;
 
 // EFFECTS
 $fast-transition-effect: 0.3s ease-in-out;
+
+// MINMAXS
+$min-most-sold-book: 300px;
+$max-most-sold-book: 1fr;
+$min-recommendation-book: 380px;
+$max-recommendation-book: 1fr;
+$min-store: 220px;
+$max-store: 1fr;
