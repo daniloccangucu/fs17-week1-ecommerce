@@ -8,3 +8,10 @@
     display: grid;
     grid-template-columns: $grid-template-columns;
 }
+@mixin respond-to($media) {
+    @if $media =='mobile' {
+        @media (max-width: 900px) {
+            @content;
+        }
+    }
+}

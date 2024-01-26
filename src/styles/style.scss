@@ -14,6 +14,13 @@ body {
     padding: variables.$base-padding-size;
     background-color: variables.$navbar-color;
     @include mixins.flex-center;
+    @include mixins.respond-to('mobile') {
+            flex-direction: column;
+    
+            ul {
+                padding-inline-start: 0;
+            }
+        }
 }
 
 .header nav {
@@ -40,11 +47,17 @@ body {
     font-size: 2.5rem;
     gap: variables.$base-gap-size;
     @include mixins.flex-center(flex-end);
+    @include mixins.respond-to('mobile') {
+            flex-direction: column;
+        }
 }
 
 .header .navbar__row2 {
     gap: variables.$base-gap-size;
     @include mixins.flex-center(flex-end);
+    @include mixins.respond-to('mobile') {
+            justify-content: center;
+        }
 }
 
 .header .navbar__row2 .navbar__cart {
@@ -119,6 +132,9 @@ section h2 {
 .most-sold .most-sold__books {
     justify-content: center;
     @include mixins.grid-layout(repeat(4, 1fr));
+    @include mixins.respond-to('mobile') {
+            @include mixins.grid-layout(repeat(auto-fit, minmax(300px, 1fr)));
+        }
 }
 
 .most-sold__book {
@@ -158,11 +174,24 @@ section h2 {
     margin: 20px 40px 20px 0;
     gap: variables.$base-gap-size;
     @include mixins.grid-layout(1fr 3fr);
+    @include mixins.respond-to('mobile') {
+            @include mixins.grid-layout(repeat(auto-fit, minmax(380px, 1fr)));
+            margin-inline-end: 0;
+        }
 }
 
-.recommendations__book img {
+.recommendations__book {
+    @include mixins.respond-to('mobile') {
+        &-image {
+            display: block;
+            margin: auto;
+        }
+    }
+
+    & img {
     height: variables.$base-book-height + 50;
     border: variables.$image-border;
+}
 }
 
 .recommendations__book-title {
@@ -208,12 +237,19 @@ footer h1 {
 
 .about__store {
     margin-top: 40px;
-    @include mixins.grid-layout(3fr 1fr);
+    @include mixins.grid-layout(1fr);
+    
+        @include mixins.respond-to('mobile') {
+            @include mixins.grid-layout(1fr);
+        }
 }
 
 .about__store-figure {
     display: flex;
     gap: variables.$base-gap-size;
+    @include mixins.respond-to('mobile') {
+            @include mixins.grid-layout(repeat(auto-fit, minmax(220px, 1fr)));
+        }
 }
 
 .about__store figure img {
